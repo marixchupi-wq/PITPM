@@ -1,16 +1,13 @@
-name: Отчет о дефекте PsychoTest
-description: Создать отчет о найденной ошибке в программе тестирования
-title: "[Ошибка] "
-labels: ["bug"]name: название шаблона
+name: название шаблона
 description: описание шаблона
 title: "[Ошибка]: "
-labels: ["bug"]
+labels:
+  - bug
 body:
   - type: markdown
     attributes:
       value: |
         Отобразить текст с разметкой markdown
-
   - type: checkboxes
     id: check_duplicate
     attributes:
@@ -20,7 +17,6 @@ body:
         - label: флажок 1
     validations:
       required: true
-
   - type: textarea
     id: field_title
     attributes:
@@ -29,7 +25,6 @@ body:
       placeholder: подсказка
     validations:
       required: true
-
   - type: textarea
     id: field_description
     attributes:
@@ -38,7 +33,6 @@ body:
       placeholder: подсказка
     validations:
       required: true
-
   - type: textarea
     id: field_preconditions
     attributes:
@@ -47,7 +41,6 @@ body:
       placeholder: подсказка
     validations:
       required: true
-
   - type: textarea
     id: field_steps
     attributes:
@@ -56,7 +49,6 @@ body:
       placeholder: подсказка
     validations:
       required: true
-
   - type: textarea
     id: field_expected
     attributes:
@@ -65,7 +57,6 @@ body:
       placeholder: подсказка
     validations:
       required: true
-
   - type: textarea
     id: field_actual
     attributes:
@@ -74,7 +65,6 @@ body:
       placeholder: подсказка
     validations:
       required: true
-
   - type: textarea
     id: field_attachments
     attributes:
@@ -83,7 +73,6 @@ body:
       placeholder: подсказка
     validations:
       required: true
-
   - type: dropdown
     id: field_priority
     attributes:
@@ -94,7 +83,6 @@ body:
         - опций
     validations:
       required: true
-
   - type: dropdown
     id: field_severity
     attributes:
@@ -103,110 +91,5 @@ body:
       options:
         - список
         - опций
-    validations:
-      required: true
-
-body:
-  - type: markdown
-    attributes:
-      value: |
-        Пожалуйста заполните форму ниже для регистрации найденного бага
-
-  - type: checkboxes
-    id: check_existing
-    attributes:
-      label: Проверка дубликатов
-      description: Перед отправкой убедитесь что проверили похожие отчеты
-      options:
-        - label: Я подтверждаю что это уникальный дефект
-    validations:
-      required: true
-
-  - type: textarea
-    id: ticket_title
-    attributes:
-      label: Заголовок
-      description: Краткое название ошибки
-      placeholder: Падение программы при сохранении
-    validations:
-      required: true
-
-  - type: textarea
-    id: ticket_description
-    attributes:
-      label: Описание
-      description: Подробное описание сути бага
-      placeholder: В программе обнаружена проблема с сохранением данных
-    validations:
-      required: true
-
-  - type: textarea
-    id: ticket_preconditions
-    attributes:
-      label: Предусловия
-      description: Что должно быть открыто или настроено перед тестом
-      placeholder: Запущено приложение PsychoTestProject.exe
-    validations:
-      required: true
-
-  - type: textarea
-    id: ticket_steps
-    attributes:
-      label: Шаги воспроизведения
-      description: Пошаговый алгоритм как вызвать ошибку
-      placeholder: 1 Открыть приложение 2 Нажать кнопку
-    validations:
-      required: true
-
-  - type: textarea
-    id: ticket_expected
-    attributes:
-      label: Ожидаемый результат
-      description: Как программа должна работать правильно
-      placeholder: Программа выдает предупреждение
-    validations:
-      required: true
-
-  - type: textarea
-    id: ticket_actual
-    attributes:
-      label: Фактический результат
-      description: Что произошло на самом деле
-      placeholder: Приложение аварийно закрывается
-    validations:
-      required: true
-
-  - type: textarea
-    id: ticket_attachments
-    attributes:
-      label: Скриншоты или Доп материалы
-      description: Ссылки или изображения дефекта
-      placeholder: Добавьте файлы сюда или поставьте прочерк
-    validations:
-      required: true
-
-  - type: dropdown
-    id: ticket_priority
-    attributes:
-      label: Приоритет
-      description: Насколько срочно нужно исправить
-      options:
-        - Низкий
-        - Средний
-        - Высокий
-        - Критический
-    validations:
-      required: true
-
-  - type: dropdown
-    id: ticket_severity
-    attributes:
-      label: Серьезность
-      description: Степень влияния на работу системы
-      options:
-        - Незначительная
-        - Значительная
-        - Критическая
-        - Блокирующая
     validations:
       required: true
