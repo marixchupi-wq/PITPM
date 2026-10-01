@@ -1,5 +1,5 @@
-name: название шаблона
-description: описание шаблона
+name: Шаблон отчета о дефекте
+description: Используйте этот шаблон для сообщения о найденных ошибках
 title: "[Ошибка]: "
 labels:
   - bug
@@ -7,89 +7,93 @@ body:
   - type: markdown
     attributes:
       value: |
-        Отобразить текст с разметкой markdown
+        Пожалуйста, заполните форму ниже для регистрации дефекта.
   - type: checkboxes
     id: check_duplicate
     attributes:
-      label: подпись
-      description: описание
+      label: Проверка дубликатов
+      description: Подтвердите, что такой ошибки еще нет в списке
       options:
-        - label: флажок 1
+        - label: Я подтверждаю, что ознакомился с существующими отчетами
     validations:
       required: true
   - type: textarea
     id: field_title
     attributes:
       label: Заголовок
-      description: описание
-      placeholder: подсказка
+      description: Укажите краткое название дефекта
+      placeholder: Например, Падение программы при сохранении пустого ответа
     validations:
       required: true
   - type: textarea
     id: field_description
     attributes:
       label: Описание
-      description: описание
-      placeholder: подсказка
+      description: Кратко опишите суть найденной ошибки
+      placeholder: Опишите, в чем заключается баг
     validations:
       required: true
   - type: textarea
     id: field_preconditions
     attributes:
       label: Предусловия
-      description: описание
-      placeholder: подсказка
+      description: Укажите условия перед началом теста
+      placeholder: Программа PsychoTestProject.exe запущена
     validations:
       required: true
   - type: textarea
     id: field_steps
     attributes:
       label: Шаги воспроизведения
-      description: описание
-      placeholder: подсказка
+      description: Пошагово опишите, как вызвать ошибку
+      placeholder: 1. Открыть... 2. Нажать...
     validations:
       required: true
   - type: textarea
     id: field_expected
     attributes:
       label: Ожидаемый результат
-      description: описание
-      placeholder: подсказка
+      description: Что должно было произойти при правильной работе
+      placeholder: Появится предупреждение об ошибке ввода
     validations:
       required: true
   - type: textarea
     id: field_actual
     attributes:
       label: Фактический результат
-      description: описание
-      placeholder: подсказка
+      description: Что произошло в программе на самом деле
+      placeholder: Приложение аварийно закрылось
     validations:
       required: true
   - type: textarea
     id: field_attachments
     attributes:
       label: Скриншоты / Доп. материалы
-      description: описание
-      placeholder: подсказка
+      description: Добавьте ссылки на скриншоты при наличии
+      placeholder: Вставьте ссылку или поставьте прочерк
     validations:
       required: true
   - type: dropdown
     id: field_priority
     attributes:
       label: Приоритет
-      description: описание
+      description: Срочность исправления
       options:
-        - список
-        - опций
+        - Низкий (Low)
+        - Средний (Medium)
+        - Высокий (High)
+        - Критический (Urgent)
     validations:
       required: true
   - type: dropdown
     id: field_severity
     attributes:
       label: Серьезность
-      description: описание
+      description: Влияние бага на работу приложения
       options:
-        - список
-        - опций
+        - Незначительная (Minor)
+        - Значительная (Major)
+        - Критическая (Critical)
+        - Блокирующая (Blocker)
     validations:
       required: true
