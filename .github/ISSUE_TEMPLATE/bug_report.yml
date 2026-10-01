@@ -21,7 +21,7 @@ body:
   - type: textarea
     id: ticket_title
     attributes:
-      label: Заголовок:
+      label: Заголовок
       description: описание
       placeholder: подсказка
     validations:
@@ -30,7 +30,7 @@ body:
   - type: textarea
     id: ticket_description
     attributes:
-      label: Описание:
+      label: Описание
       description: описание
       placeholder: подсказка
     validations:
@@ -39,7 +39,7 @@ body:
   - type: textarea
     id: ticket_preconditions
     attributes:
-      label: Предусловия:
+      label: Предусловия
       description: описание
       placeholder: подсказка
     validations:
@@ -48,7 +48,7 @@ body:
   - type: textarea
     id: ticket_steps
     attributes:
-      label: Шаги воспроизведения:
+      label: Шаги воспроизведения
       description: описание
       placeholder: подсказка
     validations:
@@ -57,7 +57,7 @@ body:
   - type: textarea
     id: ticket_expected
     attributes:
-      label: Ожидаемый результат:
+      label: Ожидаемый результат
       description: описание
       placeholder: подсказка
     validations:
@@ -66,7 +66,7 @@ body:
   - type: textarea
     id: ticket_actual
     attributes:
-      label: Фактический результат:
+      label: Фактический результат
       description: описание
       placeholder: подсказка
     validations:
@@ -75,7 +75,7 @@ body:
   - type: textarea
     id: ticket_attachments
     attributes:
-      label: Скриншоты / Доп. материалы:
+      label: Скриншоты или Доп материалы
       description: описание
       placeholder: подсказка
     validations:
@@ -84,7 +84,7 @@ body:
   - type: dropdown
     id: ticket_priority
     attributes:
-      label: Приоритет:
+      label: Приоритет
       description: описание
       options:
         - список
@@ -95,7 +95,7 @@ body:
   - type: dropdown
     id: ticket_severity
     attributes:
-      label: Серьезность:
+      label: Серьезность
       description: описание
       options:
         - список
