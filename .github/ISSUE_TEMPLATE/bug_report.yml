@@ -1,7 +1,111 @@
 name: Отчет о дефекте PsychoTest
 description: Создать отчет о найденной ошибке в программе тестирования
 title: "[Ошибка] "
+labels: ["bug"]name: название шаблона
+description: описание шаблона
+title: "[Ошибка]: "
 labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Отобразить текст с разметкой markdown
+
+  - type: checkboxes
+    id: check_duplicate
+    attributes:
+      label: подпись
+      description: описание
+      options:
+        - label: флажок 1
+    validations:
+      required: true
+
+  - type: textarea
+    id: field_title
+    attributes:
+      label: Заголовок
+      description: описание
+      placeholder: подсказка
+    validations:
+      required: true
+
+  - type: textarea
+    id: field_description
+    attributes:
+      label: Описание
+      description: описание
+      placeholder: подсказка
+    validations:
+      required: true
+
+  - type: textarea
+    id: field_preconditions
+    attributes:
+      label: Предусловия
+      description: описание
+      placeholder: подсказка
+    validations:
+      required: true
+
+  - type: textarea
+    id: field_steps
+    attributes:
+      label: Шаги воспроизведения
+      description: описание
+      placeholder: подсказка
+    validations:
+      required: true
+
+  - type: textarea
+    id: field_expected
+    attributes:
+      label: Ожидаемый результат
+      description: описание
+      placeholder: подсказка
+    validations:
+      required: true
+
+  - type: textarea
+    id: field_actual
+    attributes:
+      label: Фактический результат
+      description: описание
+      placeholder: подсказка
+    validations:
+      required: true
+
+  - type: textarea
+    id: field_attachments
+    attributes:
+      label: Скриншоты / Доп. материалы
+      description: описание
+      placeholder: подсказка
+    validations:
+      required: true
+
+  - type: dropdown
+    id: field_priority
+    attributes:
+      label: Приоритет
+      description: описание
+      options:
+        - список
+        - опций
+    validations:
+      required: true
+
+  - type: dropdown
+    id: field_severity
+    attributes:
+      label: Серьезность
+      description: описание
+      options:
+        - список
+        - опций
+    validations:
+      required: true
+
 body:
   - type: markdown
     attributes:
