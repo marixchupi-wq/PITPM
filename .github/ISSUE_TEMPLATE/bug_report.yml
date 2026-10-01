@@ -1,20 +1,20 @@
-name: Отчет о дефекте (PsychoTest)
+name: Отчет о дефекте PsychoTest
 description: Создать отчет о найденной ошибке в программе тестирования
-title: "[Ошибка]: "
+title: "[Ошибка] "
 labels: ["bug"]
 body:
   - type: markdown
     attributes:
       value: |
-        Пожалуйста, заполните форму ниже для регистрации найденного бага.
+        Пожалуйста заполните форму ниже для регистрации найденного бага
 
   - type: checkboxes
     id: check_existing
     attributes:
       label: Проверка дубликатов
-      description: Перед отправкой убедитесь, что проверили похожие отчеты
+      description: Перед отправкой убедитесь что проверили похожие отчеты
       options:
-        - label: Я подтверждаю, что это уникальный дефект
+        - label: Я подтверждаю что это уникальный дефект
     validations:
       required: true
 
@@ -23,7 +23,7 @@ body:
     attributes:
       label: Заголовок
       description: Краткое название ошибки
-      placeholder: Например: Падение программы при...
+      placeholder: Падение программы при сохранении
     validations:
       required: true
 
@@ -32,7 +32,7 @@ body:
     attributes:
       label: Описание
       description: Подробное описание сути бага
-      placeholder: В программе обнаружена проблема с...
+      placeholder: В программе обнаружена проблема с сохранением данных
     validations:
       required: true
 
@@ -41,7 +41,7 @@ body:
     attributes:
       label: Предусловия
       description: Что должно быть открыто или настроено перед тестом
-      placeholder: Запущено приложение PsychoTestProject.exe...
+      placeholder: Запущено приложение PsychoTestProject.exe
     validations:
       required: true
 
@@ -49,10 +49,8 @@ body:
     id: ticket_steps
     attributes:
       label: Шаги воспроизведения
-      description: Пошаговый алгоритм, как вызвать ошибку
-      placeholder: |
-        1. Открыть...
-        2. Нажать на...
+      description: Пошаговый алгоритм как вызвать ошибку
+      placeholder: 1 Открыть приложение 2 Нажать кнопку
     validations:
       required: true
 
@@ -61,7 +59,7 @@ body:
     attributes:
       label: Ожидаемый результат
       description: Как программа должна работать правильно
-      placeholder: Программа выдает предупреждение...
+      placeholder: Программа выдает предупреждение
     validations:
       required: true
 
@@ -70,7 +68,7 @@ body:
     attributes:
       label: Фактический результат
       description: Что произошло на самом деле
-      placeholder: Приложение аварийно закрывается...
+      placeholder: Приложение аварийно закрывается
     validations:
       required: true
 
@@ -89,10 +87,10 @@ body:
       label: Приоритет
       description: Насколько срочно нужно исправить
       options:
-        - Низкий (Low)
-        - Средний (Medium)
-        - Высокий (High)
-        - Критический (Urgent)
+        - Низкий
+        - Средний
+        - Высокий
+        - Критический
     validations:
       required: true
 
@@ -102,9 +100,9 @@ body:
       label: Серьезность
       description: Степень влияния на работу системы
       options:
-        - Незначительная (Minor)
-        - Значительная (Major)
-        - Критическая (Critical)
-        - Блокирующая (Blocker)
+        - Незначительная
+        - Значительная
+        - Критическая
+        - Блокирующая
     validations:
       required: true
