@@ -1,0 +1,104 @@
+name: Название шаблона
+description: описание шаблона
+title: "[Ошибка]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Отобразить текст с разметкой markdown
+
+  - type: checkboxes
+    id: check_existing
+    attributes:
+      label: подпись
+      description: описание
+      options:
+        - label: флажок 1
+    validations:
+      required: true
+
+  - type: textarea
+    id: ticket_title
+    attributes:
+      label: Заголовок:
+      description: описание
+      placeholder: подсказка
+    validations:
+      required: true
+
+  - type: textarea
+    id: ticket_description
+    attributes:
+      label: Описание:
+      description: описание
+      placeholder: подсказка
+    validations:
+      required: true
+
+  - type: textarea
+    id: ticket_preconditions
+    attributes:
+      label: Предусловия:
+      description: описание
+      placeholder: подсказка
+    validations:
+      required: true
+
+  - type: textarea
+    id: ticket_steps
+    attributes:
+      label: Шаги воспроизведения:
+      description: описание
+      placeholder: подсказка
+    validations:
+      required: true
+
+  - type: textarea
+    id: ticket_expected
+    attributes:
+      label: Ожидаемый результат:
+      description: описание
+      placeholder: подсказка
+    validations:
+      required: true
+
+  - type: textarea
+    id: ticket_actual
+    attributes:
+      label: Фактический результат:
+      description: описание
+      placeholder: подсказка
+    validations:
+      required: true
+
+  - type: textarea
+    id: ticket_attachments
+    attributes:
+      label: Скриншоты / Доп. материалы:
+      description: описание
+      placeholder: подсказка
+    validations:
+      required: true
+
+  - type: dropdown
+    id: ticket_priority
+    attributes:
+      label: Приоритет:
+      description: описание
+      options:
+        - список
+        - опций
+    validations:
+      required: true
+
+  - type: dropdown
+    id: ticket_severity
+    attributes:
+      label: Серьезность:
+      description: описание
+      options:
+        - список
+        - опций
+    validations:
+      required: true
